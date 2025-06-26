@@ -113,18 +113,23 @@
     <!-- Certifications -->
     <section id="certifications" tabindex="-1" aria-label="Certifications">
       <h2 >Certificate's</h2>
-     <div  class="certificate-info">Click button to show certificate</div>
-     
+    <div style="display: flex; align-items: center; justify-content: center; gap: 1em; margin-bottom: 1em;">
+      <span class="certificate-info" style="display: inline; vertical-align: middle;">Click a certificate name to view its details</span>
+    </div>
       <h2>Course Completion Certificates</h2>
       <div class="certifications-container">
         <div class="certification-item">
           <ul class="certifications-list">
-            <li onclick="showCertificate('cisco')">Cisco (Introduction to Cyber-Security)</li>
-            <li onclick="showCertificate('thm1')">Try Hack me (Pre-Security)</li>
+            <!-- //Cisco and TryHackMe -->
+            <li onclick="showCertificate('cisco',event)">Cisco (Introduction to Cyber-Security)<span class="close-icon">✕</span></li>
+          
+            <li onclick="showCertificate('thm1',event)">Try Hack me (Pre-Security)<span class="close-icon">✕</span></li>
+
             <!-- <li onclick="showCertificate('securityplus')">Security+</li>
             <li onclick="showCertificate('cissp')">CISSP</li> -->
           </ul>
           <!-- Cisco -->
+           
     <img id="cisco-cert" src="image/cisco_cys_fundamental.jpeg" alt="Cisco Certificate" class="certificate-image">
     <div id="cisco-info" class="certificate-info">Cisco's Intro to Cyber Security covers core cybersecurity principles, threats, and best practices.</div>
 
@@ -133,20 +138,26 @@
     <div id="thm1-info" class="certificate-info">TryHackMe's Pre-Security path teaches networking, Linux, and basic cybersecurity concepts.</div>
 
     <!-- Security+ -->
-    <img id="securityplus-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Security%2B+Certificate" alt="Security+ Certificate" class="certificate-image">
-    <div id="securityplus-info" class="certificate-info">Security+ by CompTIA verifies baseline skills in risk management, network security, and compliance.</div>
+    <!-- <img id="securityplus-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Security%2B+Certificate" alt="Security+ Certificate" class="certificate-image">
+    <div id="securityplus-info" class="certificate-info">Security+ by CompTIA verifies baseline skills in risk management, network security, and compliance.</div> -->
 
     <!-- CISSP -->
-    <img id="cissp-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=CISSP+In+Progress" alt="CISSP Certificate" class="certificate-image">
-    <div id="cissp-info" class="certificate-info">CISSP (in progress) is a gold-standard cert for experienced cybersecurity professionals.</div>
+    <!-- <img id="cissp-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=CISSP+In+Progress" alt="CISSP Certificate" class="certificate-image">
+    <div id="cissp-info" class="certificate-info">CISSP (in progress) is a gold-standard cert for experienced cybersecurity professionals.</div> -->
   </div>
         <div class="certification-item">
           <hr style="border: 1px solid #1b652c; width: 100%; text-align: center;">
 
           <h2>Participation Certificates</h2><br>
+
+          <!-- compec/ -->
           <ul class="certifications-list">
-            <li onclick="showCertificate('compec24')">Compec</li>
-            <li onclick="showCertificate('chc')">CHC (comsats)~ CTF</li>
+            <li onclick="showCertificate('compec24', event)">Compec <span class="close-icon">✕</span></li>
+                  <!-- chc and saylor -->
+                   
+            <li onclick="showCertificate('chc', event)">CHC (comsats)~ CTF<span class="close-icon">✕</span></li>
+            <li onclick="showCertificate('saylor_cs', event)">CS 107 C++ programming<span class="close-icon">✕</span></li>
+
             <!-- <li onclick="showCertificate('elearn')">eLearnSecurity</li>
             <li onclick="showCertificate('other')">Other</li> -->
           </ul>
@@ -156,8 +167,10 @@
           <img id="chc-cert" src="image/ctf_comsat.jpeg" alt="CHC Certificate" class="certificate-image">
           <div id="chc-info" class ="certificate-info">CHC CTF was a great experience where i learned about CTF. It was my first ctf and our team was in top 10</div>
         
-          <img id="elearn-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=eLearnSecurity+Junior" alt="eLearnSecurity Certificate" class="certificate-image">
-          <img id="other-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Other+Achievements" alt="Other Certificates" class="certificate-image">
+            <img id="saylor_cs-cert" src="image/cscourse_107.jpeg" alt="CS 107 Certificate" class="certificate-image">
+            <div id="saylor_cs-info" class="certificate-info">Refreshed my knowledge of C++ programming Fundamentals and OOP which will be valuable in reverse engineering.</div>
+          <!-- <img id="elearn-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=eLearnSecurity+Junior" alt="eLearnSecurity Certificate" class="certificate-image">
+          <img id="other-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Other+Achievements" alt="Other Certificates" class="certificate-image"> -->
           <!-- <h2 style="text-align: right;">See more</h2> -->
 
         </div>
@@ -241,7 +254,7 @@
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+    <p>&copy; <span id="year"></span>Ali Ch</p>
     <p>Last updated: <span id="last-updated"></span></p>
   </footer>
 

@@ -57,25 +57,32 @@
 //   }
 // }
 
-function showCertificate(certId) {
-  const certImage = document.getElementById(certId + '-cert');
-  const certInfo = document.getElementById(certId + '-info');
 
-  if (!certImage || !certInfo) return;
+    function showCertificate(certId, event) {
+    const certImage = document.getElementById(certId + '-cert');
+    const certInfo = document.getElementById(certId + '-info');
 
-  const isActive = certImage.classList.contains('active');
+    if (!certImage || !certInfo) return;
 
-  // Hide all images and info boxes
-  document.querySelectorAll('.certificate-image').forEach(img => img.classList.remove('active'));
-  document.querySelectorAll('.certificate-info').forEach(info => info.classList.remove('active'));
+    const isActive = certImage.classList.contains('active');
 
-  // Toggle on if it was not already active
-  if (!isActive) {
-    certImage.classList.add('active');
-    certInfo.classList.add('active');
-    certImage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // Hide all images and info
+    document.querySelectorAll('.certificate-image').forEach(img => img.classList.remove('active'));
+    document.querySelectorAll('.certificate-info').forEach(info => info.classList.remove('active'));
+
+    // Remove active from all <li> buttons
+    document.querySelectorAll('.certifications-list li').forEach(li => li.classList.remove('active'));
+
+    // Toggle on if not already active
+    if (!isActive) {
+      certImage.classList.add('active');
+      certInfo.classList.add('active');
+      event.target.classList.add('active'); // highlight button
+      certImage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   }
-}
+
+
 
 
 
