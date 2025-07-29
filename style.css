@@ -12,6 +12,8 @@
       --border-color: #238636;
       --font-mono: 'Courier New', Courier, monospace;
       --glow: 0 0 10px rgba(57, 211, 83, 0.3);
+      scroll-behavior: smooth;
+  scroll-padding-top: 70px;
     }
     ul.certifications-list li.active {
   background: var(--primary-color);
@@ -345,7 +347,51 @@ li.active .close-icon {
       display: block;
       animation: fadeIn 0.5s ease;
     }
-
+.timeline-item {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      border-left: 2px solid var(--primary-color);
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      box-shadow: 0 0 0 4px rgba(57, 211, 83, 0.2);
+    }
+    
+    .timeline-title {
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+    }
+    
+    .timeline-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted-color);
+      margin-bottom: 10px;
+    }
+    
+    .timeline-date {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: rgba(57, 211, 83, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+    
+    .timeline-description {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
     /* Projects - cards with links */
     ul.projects-list {
       list-style: none;

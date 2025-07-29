@@ -78,7 +78,10 @@
       certImage.classList.add('active');
       certInfo.classList.add('active');
       event.target.classList.add('active'); // highlight button
-      certImage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // certImage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+       const yOffset = -20; // Adjust offset so info fits nicely in view
+        const y = certImage.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }
 
