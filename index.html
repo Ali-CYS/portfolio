@@ -4,392 +4,419 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Cybersecurity professional portfolio showcasing skills, certifications, and projects">
+  <meta name="description" content="Cybersecurity professional portfolio showcasing skills, certifications, and projects">
+  <title>Ali Ch </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <title>Ali Ch</title>
-
-
-
 </head>
 
 <body>
+ 
 
+  <!-- Header -->
   <header>
-    <h1>Ali Ch</h1>
-    <div class="header-controls">
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav id="main-nav">
-        <a href="#about1">About</a>
-        <a href="#skills">Skills</a>
-        <!-- <a href="#side-skills">Skills</a> -->
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#certifications">Certs</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="logo">
+      <div class="logo-text">Ali Ch</div>
+      <div class="logo-badge">Information Security</div>
+    </div>
+    <button class="menu-toggle" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
       <button class="theme-toggle" aria-label="Toggle color theme">
-        <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z" />
-        </svg>
+        <i class="fas fa-palette"></i>
         Theme
       </button>
-    </div>
+    </nav>
   </header>
 
-  <div class="spacer"></div>
+  <!-- Section indicators -->
+  <div class="section-indicator">
+    <a href="#about" class="indicator-dot active" data-section="about">
+      <span class="indicator-tooltip">About</span>
+    </a>
+    <a href="#skills" class="indicator-dot" data-section="skills">
+      <span class="indicator-tooltip">Skills</span>
+    </a>
+    <a href="#education" class="indicator-dot" data-section="education">
+      <span class="indicator-tooltip">Education</span>
+    </a>
+    <a href="#experience" class="indicator-dot" data-section="experience">
+      <span class="indicator-tooltip">Experience</span>
+    </a>
+    <a href="#certifications" class="indicator-dot" data-section="certifications">
+      <span class="indicator-tooltip">Certifications</span>
+    </a>
+    <a href="#projects" class="indicator-dot" data-section="projects">
+      <span class="indicator-tooltip">Projects</span>
+    </a>
+    <a href="#contact" class="indicator-dot" data-section="contact">
+      <span class="indicator-tooltip">Contact</span>
+    </a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="floating-shape shape-3"></div>
+    </div>
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-shield-alt"></i> Red Team Enthusiast
+      </div>
+      <!-- <h1 class="hero-title">Cybersecurity Specialist & Penetration Tester</h1> -->
+      <p class="hero-subtitle">First-year cybersecurity student passionate about ethical hacking, network security, and offensive security techniques. Currently exploring the world of penetration testing and CTF challenges.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-code"></i> View Projects
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+      </div>
+    </div>
+  </section>
 
   <main>
     <!-- About -->
-    <section id="about1" tabindex="-1" aria-label="About Me">
-      <h2>
-        <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" />
-        </svg>
-        About Me
-      </h2>
-      <p>
-        A first-year Cybersecurity student with a passion for penetration testing, network security, and ethical
-        hacking. <br>
-        --------ReD Teamer--------
-      </p>
-
-      <!-- GitHub Stats -->
-      <div class="github-stats">
-        <div class="github-stat">
-          <h3>CTF played</h3>
-          <p id="github-repos">4</p>
+    <section id="about" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-user"></i>
         </div>
-        <div class="github-stat">
-          <h3>Commits</h3>
-          <p id="github-commits">100</p>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a first-year <span class="highlight">Cybersecurity student</span> with a deep passion for penetration testing, network security, and ethical hacking. My journey in cybersecurity started with curiosity about how systems can be secured and ethically compromised to improve defenses.</p>
+          <p>When I'm not studying, I'm actively participating in <span class="highlight">CTF competitions</span>, working on personal security projects, and continuously expanding my knowledge in offensive security techniques. My goal is to become a skilled red teamer and contribute to making the digital world more secure.</p>
+          <p>I believe in learning by doing, which is why I spend considerable time in labs like TryHackMe and work on real-world inspired projects to hone my skills.</p>
         </div>
-        <div class="github-stat">
-          <h3>Education</h3>
-          <p id="github-stars">12 years</p>
-        </div>
-        <div class="github-stat">
-          <h3>Contributions</h3>
-          <p id="github-contributions">0</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-flag"></i>
+            </div>
+            <div class="stat-number">4+</div>
+            <div class="stat-label">CTFs Played</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-number">12+</div>
+            <div class="stat-label">Years Education</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" tabindex="-1" aria-label="Core Skills">
-      <h2><svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm0-4h-2V7h2v8z" />
-        </svg> Core Skills</h2>
-      <div class="skills-container">
-        <ul class="skills-list">
-          <li>Ethical Hacking</li>
-          <li>Networking</li>
-          <li>Linux (Basic)</li>
-
-          <!-- <li>C++ (Fundamentals)</li> -->
-        </ul>
-        <ul class="skills-list">
-
-          <li>CTF Challenges</li>
-          <!-- <li>Vulnerability Assessment</li> -->
-          <li>OSINT</li>
-          <li>C++ (Fundamentals)</li>
-
-        </ul>
-      </div>
-    </section>
-
-    <!-- Side Skills -->
-    <section id="side-skills" tabindex="-1" aria-label="Technical Skills">
-      <h2>
-        <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path d="M12 2 a10 10 0 1 0 0 20 a10 10 0 1 0 0 -20
-         M12 8 a2 2 0 1 1 0 4 a2 2 0 1 1 0 -4
-         M12 16 a3 3 0 1 1 0 -6 a3 3 0 1 1 0 6
-         M4 12h4 M16 12h4 M12 4v4 M12 16v4
-         M6.93 6.93l2.83 2.83
-         M14.24 14.24l2.83 2.83
-         M6.93 17.07l2.83 -2.83
-         M14.24 9.76l2.83 -2.83" />
-        </svg>
-        Soft Skills
-      </h2>
-      <div class="skills-container">
-        <ul class="skills-list">
-          <li>WordPress Design</li>
-          <li>Blogging</li>
-          <li>Video Editing</li>
-          <!-- <li>Cloud Security</li> -->
-        </ul>
-        <ul class="skills-list">
-          <li>Github Management</li>
-          <li>Static Website Management</li>
-          <!-- <li>Digital Forensics</li>
-          <li>Incident Response</li> -->
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" tabindex="-1" aria-label="Certifications">
-      <h2><svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path
-            d="M6 2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3l-3 4-3-4H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm3 6h6v2H9V8zm0 4h4v2H9v-2z" />
-        </svg>
-        Certificate's</h2>
-      <div style="display: flex; align-items: center; justify-content: center; gap: 1em; margin-bottom: 1em;">
-        <span class="certificate-info" style="display: inline; vertical-align: middle;">Click a certificate name to view
-          its details</span>
-      </div>
-      <h2>Course Completion Certificates</h2>
-      <div class="certifications-container">
-        <div class="certification-item">
-          <ul class="certifications-list">
-            <!-- //Cisco and TryHackMe -->
-            <li onclick="showCertificate('cisco',event)">Cisco (Introduction to Cyber-Security)<span
-                class="close-icon">✕</span></li>
-
-            <li onclick="showCertificate('thm1',event)">Try Hack me (Pre-Security)<span class="close-icon">✕</span></li>
-              <li onclick="showCertificate('thm_101',event)">Try Hack me (Cyber Security 101)<span class="close-icon">✕</span></li>
-            <!-- <li onclick="showCertificate('securityplus')">Security+</li>
-            <li onclick="showCertificate('cissp')">CISSP</li> -->
-          </ul>
-          <!-- Cisco -->
-
-          <img id="cisco-cert" src="image/cisco_cys_fundamental.jpeg" alt="Cisco Certificate" class="certificate-image">
-          <div id="cisco-info" class="certificate-info">Cisco's Intro to Cyber Security covers core cybersecurity
-            principles, threats, and best practices.</div>
-
-          <!-- TryHackMe -->
-          <img id="thm1-cert" src="image/thm_pre_security.jpeg" alt="THM Certificate" class="certificate-image">
-          <div id="thm1-info" class="certificate-info">TryHackMe's Pre-Security path teaches networking, Linux, and
-            basic cybersecurity concepts.</div>
-
-          <!-- thm cyber security 101+ -->
-           <img id="thm_101-cert" src="image/thm_cyber_security_101.jpeg" alt="THM cyber security 101" class="certificate-image">
-        <div id="thm_101-info" class="certificate-info">Learned all the fundamentals needed for 'Red' and 'Blue' teaming</div>
-
-          <!-- CISSP -->
-          <!-- <img id="cissp-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=CISSP+In+Progress" alt="CISSP Certificate" class="certificate-image">
-    <div id="cissp-info" class="certificate-info">CISSP (in progress) is a gold-standard cert for experienced cybersecurity professionals.</div> -->
+    <section id="skills" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-laptop-code"></i>
         </div>
-        <div class="certification-item">
-          <hr style="border: 1px solid #1b652c; width: 100%; text-align: center;">
-
-          <h2>Participation Certificates</h2><br>
-          <!-- compec/ -->
-          <ul class="certifications-list">
-            <li onclick="showCertificate('ec_council_hackerverse_25', event)">EC Council HackerVerse ~ CTF<span class="close-icon">✕</span></li>
-            <li onclick="showCertificate('compec24', event)">Compec <span class="close-icon">✕</span></li>
-            <!-- chc and saylor -->
-            <li onclick="showCertificate('chc', event)">CHC (comsats)~ CTF<span class="close-icon">✕</span></li>
-            <li onclick="showCertificate('saylor_cs', event)">CS 107 C++ programming<span class="close-icon">✕</span>
-            </li>
-            
-            <!-- <li onclick="showCertificate('elearn')">eLearnSecurity</li>
-            <li onclick="showCertificate('other')">Other</li> -->
-          </ul>
-          <img id="ec_council_hackerverse_25-cert" src="image/hacker_verse_ctf_particiaption.jpeg" alt="EC council hackerverse ctf" class="certificate-image">
-            <div id="ec_council_hackerverse_25-info" class="certificate-info">Learned how to solve real time 'OSINT' and 'Reverse Engineering' Challenges without use 
-              of AI</div>
-
-          <img id="compec24-cert" src="image/compec_25.jpeg" alt="Compec Certificate" class="certificate-image">
-          <div id="compec24-info" class="certificate-info">A worthy experience at NUST where i met professionals and
-            learned from them & from innovative projects </div>
-
-          <img id="chc-cert" src="image/ctf_comsat.jpeg" alt="CHC Certificate" class="certificate-image">
-          <div id="chc-info" class="certificate-info">CHC CTF was a great experience where i learned about CTF. It was
-            my first ctf and our team was in top 10</div>
-
-          <img id="saylor_cs-cert" src="image/cscourse_107.jpeg" alt="CS 107 Certificate" class="certificate-image">
-          <div id="saylor_cs-info" class="certificate-info">Refreshed my knowledge of C++ programming Fundamentals and
-            OOP which will be valuable in reverse engineering.</div>
-          <!-- <img id="elearn-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=eLearnSecurity+Junior" alt="eLearnSecurity Certificate" class="certificate-image">
-          <img id="other-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Other+Achievements" alt="Other Certificates" class="certificate-image"> -->
-          <!-- <h2 style="text-align: right;">See more</h2> -->
-
-        </div>
-        <div class="certification-item">
-          <hr style="border: 1px solid #1b652c; width: 100%; text-align: center;">
-          <h2>Professional Certifications</h2><br>
-          <p>Coming soon</p>
-          <!-- <ul class="certifications-list">
-            <li onclick="showCertificate('tryhackme')">TryHackMe</li>
-            <li onclick="showCertificate('htb')">HTB Pro</li>
-            <li onclick="showCertificate('elearn')">eLearnSecurity</li>
-            <li onclick="showCertificate('other')">Other</li>
-          </ul>
-          <img id="tryhackme-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=TryHackMe+Top+1%25" alt="TryHackMe Certificate" class="certificate-image">
-          <img id="htb-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=HTB+Pro+Hacker" alt="HackTheBox Certificate" class="certificate-image">
-          <img id="elearn-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=eLearnSecurity+Junior" alt="eLearnSecurity Certificate" class="certificate-image">
-          <img id="other-cert" src="https://via.placeholder.com/600x400/161b22/39d353?text=Other+Achievements" alt="Other Certificates" class="certificate-image"> -->
-          <!-- <h2 style="text-align: right;">See more</h2> -->
-
-        </div>
+        <h2>Skills</h2>
       </div>
-    </section>
-
-    <section id="education" tabindex="-1" aria-label="Education" class="animate-section animate-delay-1">
-      <h2>
-        <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 9.3L5.2 9 12 5.7 18.8 9 12 12.3zm-6 2.7v3h12v-3l-6 3-6-3z" />
-        </svg>
-        </svg>Education
-      </h2>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2023 - Present</div>
-        <h3 class="timeline-title">Bachelor of Science in Cybersecurity</h3>
-        <p class="timeline-subtitle">COMSATS University Islamabad, Lahore Campus</p>
-        <div class="timeline-description">
-          <p>Currently pursuing degree with focus on:</p>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-shield-alt"></i> Core Security</h3>
           <ul class="skills-list">
-            <li>Network Security</li>
-            <li>Ethical Hacking</li>
-            <li>Cryptography</li>
-            <li>Digital Forensics</li>
+            <li><i class="fas fa-chevron-right"></i> Ethical Hacking</li>
+            <li><i class="fas fa-chevron-right"></i> Network Security (learning)</li>
+            <li><i class="fas fa-chevron-right"></i> Penetration Testing (learning)</li>
+           
+            <li><i class="fas fa-chevron-right"></i> OSINT</li>
           </ul>
         </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2020 - 2022</div>
-        <h3 class="timeline-title">FSc Pre-Engineering</h3>
-        <p class="timeline-subtitle">Punjab Group of Colleges</p>
-        <div class="timeline-description">
-          <p>Completed with focus on Physics, Chemistry, and Mathematics</p>
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Technical Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-chevron-right"></i> Linux Fundamentals</li>
+            <li><i class="fas fa-chevron-right"></i> C++ Programming</li>
+            <li><i class="fas fa-chevron-right"></i> Git/GitHub</li>
+            <li><i class="fas fa-chevron-right"></i> WordPress</li>
+            <li><i class="fas fa-chevron-right"></i> Static Site Management</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-brain"></i> Soft Skills</h3>
+          <ul class="skills-list">
+            <li><i class="fas fa-chevron-right"></i> Problem Solving</li>
+            <li><i class="fas fa-chevron-right"></i> Technical Writing</li>
+            <li><i class="fas fa-chevron-right"></i> Team Collaboration</li>
+            <li><i class="fas fa-chevron-right"></i> Continuous Learning</li>
+            <li><i class="fas fa-chevron-right"></i> Attention to Detail</li>
+          </ul>
         </div>
       </div>
     </section>
-    <section id="experience" tabindex="-1" aria-label="Experience" class="animate-section animate-delay-2">
-      <h2><svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path
-            d="M10 2h4a2 2 0 0 1 2 2v2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4V4a2 2 0 0 1 2-2zm0 4h4V4h-4v2z" />
-        </svg>Experience</h2>
 
-      <div class="timeline-item">
-        <div class="timeline-date">2024 - Present</div>
-        <h3 class="timeline-title">CTF Player & Team Member</h3>
-        <p class="timeline-subtitle">CHC (Comsats Hackers Club)</p>
-        <div class="timeline-description">
-          <p>Participated in multiple CTF competitions as part of a team:</p>
-          <ul class="skills-list">
-            <li>Ranked in top 10 in university's internal CTF competition</li>
-            <li>Solved challenges in web exploitation, cryptography, and forensics</li>
-            <li>Collaborated with team members on complex security puzzles</li>
-          </ul>
+     <!-- Certifications -->
+    <section id="certifications" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h2>Certifications</h2>
+      </div>
+      
+      <div class="certifications-tabs">
+        <div class="cert-tab active" data-tab="course">Course Completion</div>
+        <div class="cert-tab" data-tab="participation">Participation</div>
+        <div class="cert-tab" data-tab="professional">Professional</div>
+      </div>
+      
+      <div class="certificates-container">
+        <ul class="certificate-list" id="certificate-list">
+          <!-- Certificates -->
+        </ul>
+        
+        <div class="certificate-display">
+          <img id="cert-img" class="certificate-image" src="" alt="Certificate">
+          <div class="certificate-info">
+            <h3 id="cert-title">Select a certificate to view</h3>
+            <p id="cert-desc">Click on any certificate from the list to view details</p>
+            <div id="cert-link"></div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="timeline-item">
-        <div class="timeline-date">2020 - Present</div>
-        <h3 class="timeline-title">WordPress Designer & Blogger</h3>
-        <p class="timeline-subtitle">Freelance</p>
-        <div class="timeline-description">
-          <p>Developed and maintained websites with security focus:</p>
-          <ul class="skills-list">
-            <li>Implemented security best practices for client websites</li>
-            <li>Authored technical blog posts on cybersecurity topics</li>
-            <li>Managed site security updates and vulnerability patching</li>
-          </ul>
+    <!-- Experience -->
+    <section id="experience" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - Present</div>
+          <h3 class="timeline-title">CTF Player & Security Researcher</h3>
+          <p class="timeline-subtitle">Independent</p>
+          <div class="timeline-description">
+            <p> Regularly participating in Capture The Flag competitions to practice and enhance cybersecurity skills. Focus on <span class="highlight">OSINT, web exploitation</span>, cryptography, and forensics challenges.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - Present</div>
+          <h3 class="timeline-title">WordPress Designer & Blogger</h3>
+          <p class="timeline-subtitle">Freelance</p>
+          <div class="timeline-description">
+            <p>Making Optimized <span class="highlight">WordPress</span> websites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+     <!-- Education -->
+    <section id="education" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h2>Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - Present</div>
+          <h3 class="timeline-title">Bachelor in Information Security</h3>
+          <p class="timeline-subtitle">NUST, Military College of Signals</p>
+          <!-- <div class="timeline-description">
+            <p>Currently pursuing a degree with focus on network security, ethical hacking, cryptography, and digital forensics.</p>
+          </div> -->
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2020 - 2023</div>
+          <h3 class="timeline-title">FSc Pre-Medical with Additional Math</h3>
+          <p class="timeline-subtitle">APS Westridge 3 Campus, Rawalpindi</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2017 - 2019</div>
+          <h3 class="timeline-title">Matric in Pre-Medical</h3>
+          <p class="timeline-subtitle">Beaconhouse School System, Tipu Sultan Campus, Rawalpindi</p>
         </div>
       </div>
     </section>
     <!-- Projects -->
-    <section id="projects" tabindex="-1" aria-label="Projects">
-      <h2>
-        <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path d="M10 4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h6z" />
-        </svg>
-        Projects
-      </h2>
-      <ul class="projects-list">
-        <li>
-          <a href="https://github.com/Ali-CYS/C-GUI-Projects" target="_blank" rel="noopener noreferrer">C++ GUI
-            projects</a>
-          <p>C++ GUI based projects </p>
-          <div class="project-tech">
-            <span>GUI</span>
-            <span>.net framework</span>
-            <!-- <span>Security</span> -->
+    <section id="projects" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title"><i class="fas fa-window-maximize"></i> C++ GUI Projects</h3>
+            <p class="project-description">Collection of GUI-based applications built with C++ and .NET framework demonstrating various programming concepts.</p>
           </div>
-        </li>
-        <li>
-          <a href="https://github.com/Ali-CYS/C-console-projects" target="_blank" rel="noopener noreferrer">C++ console
-            Projects</a>
-          <p>Simple C++ console applications demonstrating basic programming concepts</p>
-          <span>OOP</span>
-          <span>Fundamentals</span>
-          <!-- <span>Automation</span> -->
+          <div class="project-body">
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">.NET</span>
+              <span class="tech-tag">GUI</span>
+            </div>
           </div>
-        </li>
-        <!-- <li>
-          <a href="https://github.com/yourusername/secure-auth" target="_blank" rel="noopener noreferrer">Secure Auth System</a>
-          <p>MFA system with rate limiting, anomaly detection, and secure session management.</p>
-          <div class="project-tech">
-            <span>Node.js</span>
-            <span>JWT</span>
-            <span>Security</span>
+          <div class="project-footer">
+            <a href="https://github.com/Ali-CYS/C-GUI-Projects" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
           </div>
-        </li> -->
-      </ul>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title"><i class="fas fa-terminal"></i> C++ Console Projects</h3>
+            <p class="project-description">Various console applications demonstrating OOP concepts and fundamental programming techniques in C++.</p>
+          </div>
+          <div class="project-body">
+            <div class="project-tech">
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">Console</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="https://github.com/Ali-CYS/C-console-projects" target="_blank" class="project-link">
+              <i class="fas fa-external-link-alt"></i> View Project
+            </a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <h3 class="project-title"><i class="fas fa-shield-alt"></i> Security Lab</h3>
+            <p class="project-description">Personal cybersecurity lab environment for practicing penetration testing, vulnerability assessment, and security research.</p>
+          </div>
+          <div class="project-body">
+            <div class="project-tech">
+              <span class="tech-tag">Kali Linux</span>
+              <span class="tech-tag">Virtualization</span>
+              <span class="tech-tag">Security</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="#" class="project-link">
+              <i class="fas fa-external-link-alt"></i> Coming Soon
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" tabindex="-1" aria-label="Contact">
-      <h2> <svg class="icon-shield" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"
-          focusable="false">
-          <path
-            d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24 11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C9.16 21 3 14.84 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.23.2 2.42.62 3.54a1 1 0 0 1-.24 1.05l-2.26 2.2z" />
-        </svg>Contact</h2>
-      <p class="contact-info">
-        Email: <a href="mailto:security@example.com">alichpk2004@example.com</a><br>
-        LinkedIn: <a href="https://www.linkedin.com/in/ali-ch-5821b3342/" target="_blank">linkedin.com/in/ali-ch</a><br>
-        GitHub: <a href="https://github.com/Ali-CYS" target="_blank">github.com/ali-cys</a><br>
-        THM: <a href="https://tryhackme.com/p/COOKIE" target="_blank">tryhackme.com/cookie</a>
-      </p>
-      <div class="contact-icons">
-        <!-- <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 4.569c-.885.39-1.83.654-2.825.775 1.014-.609 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.954-2.173-1.55-3.591-1.55-2.717 0-4.92 2.203-4.92 4.92 0 .39.045.765.127 1.124-4.083-.205-7.702-2.159-10.126-5.134-.422.722-.666 1.562-.666 2.457 0 1.695.863 3.192 2.175 4.073-.8-.026-1.555-.245-2.213-.61v.061c0 2.37 1.685 4.347 3.918 4.793-.41.111-.842.171-1.287.171-.314 0-.615-.03-.91-.086.616 1.92 2.406 3.319 4.525 3.36-1.66 1.3-3.75 2.075-6.024 2.075-.39 0-.779-.022-1.17-.067 2.148 1.378 4.7 2.183 7.453 2.183 8.94 0 13.843-7.41 13.843-13.843 0-.21 0-.423-.015-.633.95-.69 1.77-1.56 2.42-2.548l-.047-.02z"/></svg>
-        </a> -->
-        <a href="https://www.linkedin.com/in/ali-ch-5821b3342/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.327-.025-3.037-1.852-3.037-1.852 0-2.135 1.447-2.135 2.943v5.663h-3.554V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.369-1.852 3.604 0 4.271 2.373 4.271 5.456v6.287zM5.337 7.433a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM6.792 20.452H3.884V9h2.908v11.452zM22.225 0H1.771C.791 0 0 .77 0 1.722v20.555C0 23.234.792 24 1.771 24h20.451c.979 0 1.778-.77 1.778-1.722V1.722C24 .77 23.204 0 22.225 0z" />
-          </svg>
-        </a>
-        <a href="https://github.com/Ali-CYS" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.26.82-.577v-2.173c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.083-.73.083-.73 1.205.084 1.838 1.237 1.838 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.42-1.304.763-1.605-2.665-.303-5.467-1.335-5.467-5.93 0-1.31.467-2.38 1.235-3.22-.123-.303-.536-1.523.117-3.176 0 0 1.007-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.005 2.045.137 3.003.403 2.29-1.552 3.295-1.23 3.295-1.23.655 1.653.242 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.807 5.625-5.48 5.92.43.37.813 1.1.813 2.22v3.293c0 .32.216.694.825.576C20.565 21.796 24 17.297 24 12c0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
-        <a href="https://tryhackme.com/p/COOKIE" target="_blank" rel="noopener noreferrer" aria-label="HackTheBox">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path
-              d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22.5c-5.8 0-10.5-4.7-10.5-10.5S6.2 1.5 12 1.5 22.5 6.2 22.5 12 17.8 22.5 12 22.5zm-3.5-10.5h7v3h-7v-3z" />
-          </svg>
-        </a>
+    <section id="contact" class="animate-section">
+      <div class="section-header">
+        <div class="section-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <a href="mailto:alichpk2004@gmail.com">alichpk2004@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/ali-ch-5821b3342/" target="_blank">Ali-Ch</a>
+            </div>
+          </div>
+          
+          
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ali-ch-5821b3342/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Ali-CYS" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://tryhackme.com/p/COOKIE" target="_blank" class="social-link">
+              <i class="fas fa-flag"></i>
+            </a>
+          </div>
+        </div>
+        <!-- only if needed or add some api calls  -->
+        <!-- <div class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Your Email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </div> -->
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> Ali Ch</p>
-    <p>Last updated: <span id="last-updated"></span></p>
+    <div class="footer-content">
+      <p class="footer-text">&copy; <span id="year"></span> Ali Ch. All rights reserved.</p>
+      <p class="footer-text">Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for the security community</p>
+    </div>
   </footer>
 
-</body>
-<script src="index.js"></script>
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
 
+  <!-- Particles.js for background effect -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="index.js"></script>
+</body>
 </html>
