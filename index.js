@@ -42,7 +42,8 @@
       course: [
         { id: 'cisco', title: 'Introduction to Cyber-Security', provider: 'Cisco', img: 'image/cisco_cys_fundamental.jpeg', desc: 'Cisco\'s Intro to Cyber Security covers core cybersecurity principles, threats, and best practices.',link:'https://www.credly.com/earner/earned/badge/b4b255dc-d42b-456b-8af9-cd35f057e645' },
         { id: 'thm1', title: 'Pre-Security', provider: 'TryHackMe', img: 'image/thm_pre_security.jpeg', desc: 'TryHackMe\'s Pre-Security path teaches networking, Linux, and basic cybersecurity concepts.',link:'https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-VCBMRPRMHI.pdf' },
-        { id: 'thm_101', title: 'Cyber Security 101', provider: 'TryHackMe', img: 'image/thm_cyber_security_101.jpeg', desc: 'Learned all the fundamentals needed for "Red" and "Blue" teaming.',link:'https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D7WROLE3LW.pdf' }
+        { id: 'thm_101', title: 'Cyber Security 101', provider: 'TryHackMe', img: 'image/thm_cyber_security_101.jpeg', desc: 'Learned all the fundamentals needed for "Red" and "Blue" teaming.',link:'https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-D7WROLE3LW.pdf' },
+        { id:'thm_jr_pen_test' ,title:'Junior Penetration Testing' , provider: 'Tryhackme', img:'image/Jr_pen_test.jpeg', desc:'Learned and practiced core skills in Networking , Web exploitation, Privilege escalation & Security tools used in the industry' , link:'https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-DLGDLQUQDB.pdf' }
       ],
       participation: [
         { id: 'ec_council_hackerverse_25', title: 'HackerVerse CTF', provider: 'EC Council', img: 'image/hacker_verse_ctf_particiaption.jpeg', desc: 'Learned how to solve real-time OSINT and Reverse Engineering challenges without AI.' },
