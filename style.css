@@ -1439,4 +1439,15 @@ section h2:hover::after {
   nav a { font-size: 0.85rem; }
   footer { font-size: 0.8rem; }
     }
+    @media (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    padding-top: 140px;   /* adjust if header is taller */
+  }
+}
+@media (max-width: 768px) {
+  .ctf-only {
+    padding: 20px 10px;
+  }
+}
   
