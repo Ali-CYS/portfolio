@@ -2,8 +2,8 @@
     /* CSS Variables for theme */
     :root {
       --bg-color: #0a0e17;
-      --primary-color: #00ff88;
-      --secondary-color: #00d0ff;
+      --primary-color: #ff2a6d;
+  --secondary-color: #ff8a00;
       --accent-color: #ff2a6d;
       --text-color: #e2f1ff;
       --muted-color: #8b949e;
@@ -13,9 +13,9 @@
       --border-color: #238636;
       --font-main: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       --font-mono: 'Fira Code', 'Courier New', monospace;
-      --glow: 0 0 15px rgba(0, 255, 136, 0.4);
+       --glow: 0 0 15px rgba(255, 42, 109, 0.4);
       --transition: all 0.3s ease;
-      --section-spacing: 100px;
+      --section-spacing: 80px;
     }
 
     /* Reset and base styles */
@@ -217,12 +217,13 @@
       font-weight: 300;
     }
     
-    .hero-cta {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 40px;
-    }
+   .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 40px;
+}
     
     .btn {
       padding: 14px 32px;
@@ -384,18 +385,45 @@
       font-size: 1.5rem;
     }
     
-    section h2 {
-      margin: 0;
-      font-size: 2.2rem;
-      color: var(--primary-color);
-      font-weight: 700;
-    }
-    
+section h2 {
+  margin: 0 0 1rem 0; /* keeps small spacing below */
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+/* Cyber glow effect */
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* Animate glow on hover */
+section h2:hover::after {
+  transform: scaleX(1);
+}
     /* About - Enhanced */
     .about-content {
       display: grid;
       grid-template-columns: 2fr 1fr;
-      gap: 40px;
+      gap: 0px;
     }
     
     .about-text {
@@ -730,7 +758,7 @@
     
     .timeline-dot {
       position: absolute;
-      left: -46px;
+      left: -49px;
       top: 32px;
       width: 20px;
       height: 20px;
@@ -1138,8 +1166,114 @@
       opacity: 1;
       visibility: visible;
     }
-    
-   
+
+    /* image loaded */
+    .img-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.25s ease;
+}
+
+.img-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--glow);
+  transform: scale(0.9);
+  animation: zoomIn 0.25s ease forwards;
+}
+
+.img-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 40px;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.img-modal-close:hover {
+  color: var(--secondary-color);
+}
+
+@keyframes zoomIn {
+  to { transform: scale(1); }
+}
+
+/* make images feel clickable */
+.ctf-only-card img,
+.certificate-image {
+  cursor: zoom-in;
+}
+    /* ctf ccerts */
+    .ctf-only {
+  padding: 40px;
+}
+
+.ctf-only-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.ctf-only-card {
+  background: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 22px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.ctf-only-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--glow);
+  border-color: var(--primary-color);
+}
+
+.ctf-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ctf-head h3 {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.ctf-rank {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: 600;
+}
+
+.ctf-only-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.ctf-only-card img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
     
     @keyframes spin {
       to { transform: rotate(360deg); }

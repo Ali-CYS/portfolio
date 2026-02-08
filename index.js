@@ -4,14 +4,14 @@
       particlesJS('particles-js', {
         particles: {
           number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#00ff88" },
+          color: { value: "#ff0000" },
           shape: { type: "circle" },
           opacity: { value: 0.5, random: true },
           size: { value: 3, random: true },
           line_linked: {
             enable: true,
             distance: 150,
-            color: "#00ff88",
+            color: "#949494",
             opacity: 0.4,
             width: 1
           },
@@ -52,6 +52,10 @@
         { id: 'saylor_cs', title: 'CS 107 C++ Programming', provider: 'Saylor Academy', img: 'image/cscourse_107.jpeg', desc: 'Refreshed my knowledge of C++ programming Fundamentals and OOP, valuable for reverse engineering.', link: 'https://example.com/hackerverse-cert' }
       ],
       professional: [
+        { id: 'cwse', title: 'Certified Web Security Expert', provider: 'Hackviser', img: 'image/cwse.jpeg', desc: 'Learned advanced web application security concepts and techniques.', link:'https://hackviser.com/verify?id=HV-CWSE-KHQ1NL7P' },
+        {id: 'CAPT', title: 'Certified Application Penetration Tester', provider: 'Hackviser', img: 'image/capt.jpeg', desc: 'Mastered application penetration testing methodologies and tools.', link:'https://hackviser.com/verify?id=HV-CAPT-OTVMH0PH' },
+        {id: 'C3SA', title: 'Certified Cyber Security Analyst', provider: 'CWL', img: 'image/c3sa.png', desc: 'Refresehed my fundamental knowledge', link:'https://labs.cyberwarfare.live/credential/achievement/691463afdffb6e3a542fae4b' },
+        {id:'Web-rta', title:'Web-RTA', provider:'CWL', img:'image/web-rta.png', desc:'Learned and practiced web application security concepts and techniques.', link:'https://labs.cyberwarfare.live/credential/achievement/69860ba24d24ff2411af20f5' },
         { id: 'intro_to_cip', title: 'Introduction to CIP', provider: 'OPSWAT', img: 'image/introduction_to_cip.jpeg', desc: 'Gained foundational knowledge in Critical Infrastructure Protection (CIP).',link:'https://learn.opswatacademy.com/certificate/q-xgAa2VMg' }
       ]
     };
@@ -176,23 +180,50 @@ if (cert.link) {
     });
     
     // Theme toggle functionality
-    const themeToggle = document.querySelector('.theme-toggle');
-    themeToggle.addEventListener('click', () => {
-      document.body.classList.toggle('theme-alternate');
-      
-      if (document.body.classList.contains('theme-alternate')) {
-        document.documentElement.style.setProperty('--primary-color', '#ff2a6d');
-        document.documentElement.style.setProperty('--secondary-color', '#ff8a00');
-        document.documentElement.style.setProperty('--glow', '0 0 15px rgba(255, 42, 109, 0.4)');
-        themeToggle.innerHTML = '<i class="fas fa-palette"></i> Default Theme';
-        
-      } else {
-        document.documentElement.style.setProperty('--primary-color', '#00ff88');
-        document.documentElement.style.setProperty('--secondary-color', '#00d0ff');
-        document.documentElement.style.setProperty('--glow', '0 0 15px rgba(0, 255, 136, 0.4)');
-        themeToggle.innerHTML = '<i class="fas fa-palette"></i> Alternate Theme';
-      }
-    });
+  const themeToggle = document.querySelector('.theme-toggle');
+
+function applyTheme(isAlternate) {
+  if (isAlternate) {
+    // GREEN theme
+    document.documentElement.style.setProperty('--primary-color', '#00ff88');
+    document.documentElement.style.setProperty('--secondary-color', '#00d0ff');
+    document.documentElement.style.setProperty('--glow', '0 0 15px rgba(0, 255, 136, 0.4)');
+    themeToggle.innerHTML = '<i class="fas fa-palette"></i> Switch to Red';
+  } else {
+    // RED theme (default)
+    document.documentElement.style.setProperty('--primary-color', '#ff2a6d');
+    document.documentElement.style.setProperty('--secondary-color', '#ff8a00');
+    document.documentElement.style.setProperty('--glow', '0 0 15px rgba(255, 42, 109, 0.4)');
+    themeToggle.innerHTML = '<i class="fas fa-palette"></i> Switch to Green';
+  }
+}
+// iamge loeader
+// Image click-to-zoom modal (robust version)
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("imgModalContent");
+const modalClose = document.querySelector(".img-modal-close");
+
+// click ANY image inside certs or ctf cards (even dynamic ones)
+document.addEventListener("click", function(e) {
+  if (e.target.matches(".ctf-only-card img, .certificate-image")) {
+    modal.style.display = "flex";
+    modalImg.src = e.target.src;
+  }
+});
+
+modalClose.onclick = () => modal.style.display = "none";
+
+modal.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+
+// ✅ set default = RED on load
+applyTheme(false);
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('theme-alternate');
+  applyTheme(document.body.classList.contains('theme-alternate'));
+});
     
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
